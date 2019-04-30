@@ -6,7 +6,3 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("ImmunoTrak Home.")
-
-
-def trak(request):
-    return HttpResponse("Login Page.")
