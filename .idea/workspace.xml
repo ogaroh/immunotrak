@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78e71996-d6c6-4f67-9df3-7277a9a6983a" name="Default Changelist" comment="" />
+    <list default="true" id="78e71996-d6c6-4f67-9df3-7277a9a6983a" name="Default Changelist" comment="settings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/immunotrak/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/immunotrak/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/material.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/css/material.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/images/darkblue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/js/material.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trak/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/trak/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trak/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trak/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,71 +25,7 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/immunotrak/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trak/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trak/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/immunotrak/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-              <folding>
-                <element signature="e#634#666#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -116,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="27" />
     <option name="width" value="683" />
     <option name="height" value="690" />
@@ -129,43 +78,45 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="immunotrak" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immunotrak" type="462c0819:PsiDirectoryNode" />
+              <item name="immunotrak_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="immunotrak_project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="immunotrak" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immunotrak" type="462c0819:PsiDirectoryNode" />
-              <item name="immunotrak" type="462c0819:PsiDirectoryNode" />
+              <item name="immunotrak_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="immunotrak_project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="immunotrak" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immunotrak" type="462c0819:PsiDirectoryNode" />
+              <item name="immunotrak_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="immunotrak_project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="immunotrak_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="immunotrak_project" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="immunotrak" type="b2602c69:ProjectViewProjectNode" />
-              <item name="immunotrak" type="462c0819:PsiDirectoryNode" />
-              <item name="trak" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -216,17 +167,28 @@
       <updated>1556628282652</updated>
       <workItem from="1556628288396" duration="4466000" />
       <workItem from="1556784572768" duration="1482000" />
+      <workItem from="1557247214230" duration="1033000" />
+      <workItem from="1557248329550" duration="607000" />
+      <workItem from="1557745568855" duration="581000" />
     </task>
+    <task id="LOCAL-00001" summary="settings">
+      <created>1557247382567</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1557247382567</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5948000" />
+    <option name="totallyTimeSpent" value="8169000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="690" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="690" extended-state="7" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2530303" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26439393" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="manage.py@immunotrak" order="0" weight="0.32969034" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
@@ -252,6 +214,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="settings" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/immunotrak/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -272,11 +238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trak/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
+        <state relative-caret-position="84">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -290,27 +253,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/immunotrak/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="252">
+          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
+          <folding>
+            <element signature="e#634#666#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="147">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/immunotrak/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="12" column="75" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
         </state>
       </provider>
     </entry>
