@@ -1,0 +1,19 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: white
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 0 26px;
+}
+
+.mg {
+    margin-top: 50px;
+}
+
+.login-form {}

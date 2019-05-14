@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78e71996-d6c6-4f67-9df3-7277a9a6983a" name="Default Changelist" comment="settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/immunotrak/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/immunotrak/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/css/material.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/css/material.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/images/darkblue.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/js/material.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trak/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/trak/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trak/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/trak/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +54,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="683" />
     <option name="height" value="690" />
@@ -169,7 +158,7 @@
       <workItem from="1556784572768" duration="1482000" />
       <workItem from="1557247214230" duration="1033000" />
       <workItem from="1557248329550" duration="607000" />
-      <workItem from="1557745568855" duration="581000" />
+      <workItem from="1557745568855" duration="1475000" />
     </task>
     <task id="LOCAL-00001" summary="settings">
       <created>1557247382567</created>
@@ -182,13 +171,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8169000" />
+    <option name="totallyTimeSpent" value="9063000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="690" extended-state="7" />
+    <frame x="0" y="27" width="1366" height="690" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.26439393" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.26439393" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="manage.py@immunotrak" order="0" weight="0.32969034" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
