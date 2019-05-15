@@ -30,4 +30,4 @@ def about_view(request, *args, **kwargs):
 
 
 def schedule_view(request, *args, **kwargs):
-    return render(request, "about.html", {})
+    return render(request, "schedule.html", {})
