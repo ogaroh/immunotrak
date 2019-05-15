@@ -9,3 +9,6 @@ def home_view(request, *args, **kwargs):
 
 def login_view(request, *args, **kwargs):
     return render(request, "login.html", {})
+
+def charts_view(request, *args, **kwargs):
+    return render(request, "charts.html", {} )
