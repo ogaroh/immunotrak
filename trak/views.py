@@ -2,32 +2,37 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+
 # home view
-
-
 def home_view(request, *args, **kwargs):
     return render(request, "home.html", {})
 
+
 # all charts view
-
-
 def charts_view(request, *args, **kwargs):
     return render(request, "charts.html", {})
 
+
 # contact us view
-
-
 def contact_view(request, *args, **kwargs):
     return render(request, "contact.html", {})
 
+
 # about immunotrak view
-
-
 def about_view(request, *args, **kwargs):
     return render(request, "about.html", {})
 
+
 # schedules view
-
-
 def schedule_view(request, *args, **kwargs):
     return render(request, "schedule.html", {})
+
+
+# locations view
+def locations_view(request, *args, **kwargs):
+    return render(request, "locations.html", {})
+
+
+# register view
+def register_view(request, *args, **kwargs):
+    return render(request, "register.html", {})
