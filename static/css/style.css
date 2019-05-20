@@ -4,7 +4,9 @@ html {
 
 body {
     font-family: 'Montserrat';
-    background-color: white
+    background-color: white;
+    margin: 0;
+    font-size: 100%;
 }
 
 .btn {
@@ -16,4 +18,11 @@ body {
     margin-top: 50px;
 }
 
-.login-form {}
+
+/* icon syling */
+
+a.fas,
+a.fab {
+    border: 1px solid white;
+    color: white;
+}
