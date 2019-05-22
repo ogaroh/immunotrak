@@ -1,5 +1,6 @@
 from django.contrib import admin
 from .models import Vaccine, Child, Parent, Location
+import schedule.admin
 
 admin.site.site_header = "ImmunoTrak"
 admin.site.site_title = "ImmunoTrak"
@@ -9,3 +10,4 @@ admin.site.register(Vaccine)
 admin.site.register(Child)
 admin.site.register(Parent)
 admin.site.register(Location)
+admin.site.register(Schedule)

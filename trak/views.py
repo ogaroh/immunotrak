@@ -23,11 +23,6 @@ def about_view(request, *args, **kwargs):
     return render(request, "about.html", {})
 
 
-# schedules view
-def schedule_view(request, *args, **kwargs):
-    return render(request, "schedule.html", {})
-
-
 # locations view
 def locations_view(request, *args, **kwargs):
     return render(request, "locations.html", {})

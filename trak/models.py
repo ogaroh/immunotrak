@@ -11,31 +11,26 @@ class Vaccine(models.Model):
     available = models.BooleanField(default=True)
 
 
+# parent model
+class Parent(models.Model):
+    first_name = models.CharField(max_length=50)
+    middle_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    id_number = models.DecimalField(decimal_places=0, max_digits=50)
+    phone_number = models.DecimalField(decimal_places=0, max_digits=10)
+    # children = models.ForeignKey(Child, on_delete=models.CASCADE)
+
+
 # child model
 class Child(models.Model):
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     dob = models.DateField(null=False)
-    child_id = models.IntegerField()
-    # parent = models.ForeignKey(Parent) # insert from parent model
-
-    def __str__(self):
-        return self.first_name
-
-
-# parent model
-class Parent(models.Model):
-    first_name = models.CharField(max_length=50)
-    middle_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    parent_id = models.DecimalField(decimal_places=0, max_digits=50)
-    # children = models.ForeignKey(Child) # insert from child model
-
+    parent = models.ForeignKey(Parent, on_delete=models.CASCADE)
 
 
 # location model
 class Location(models.Model):
     county = models.CharField(max_length=50)
-    vaccinations = models.IntegerField() # insert foreign from vaccination model
-    
+    vaccinations = models.IntegerField()  # insert foreign from vaccination model

@@ -23,7 +23,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'trak.apps.TrakConfig',  # new line
+    'trak.apps.TrakConfig',  # add trak app
+    'schedule.apps.ScheduleConfig', # add schedule app
 ]
 
 MIDDLEWARE = [
