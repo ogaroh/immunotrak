@@ -1,6 +1,11 @@
 from django.db import models
+from trak.models import Child, Vaccine
 
-# Create your models here.
+
+# Create your models here
+
+# Schedule model
 class Schedule (models.Model):
-    date = models.DateField(null=False)
-    child = models.DateTimeField(null=False)
+    child = models.ForeignKey(Child, on_delete=models.CASCADE)
+    date = models.DateTimeField(null=False)
+    type = models.ForeignKey(Vaccine, on_delete=models.CASCADE)
