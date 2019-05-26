@@ -8,4 +8,4 @@ from trak.models import Child, Vaccine
 class Schedule (models.Model):
     child = models.ForeignKey(Child, on_delete=models.CASCADE)
     date = models.DateTimeField(null=False)
-    type = models.ForeignKey(Vaccine, on_delete=models.CASCADE)
+    vaccine = models.ForeignKey(Vaccine, on_delete=models.CASCADE)
