@@ -1,17 +1,17 @@
-{%load static%}
-
 <!DOCTYPE html>
 <html>
+{%load static%}
 
 <head>
     <!-- Import Local custom style-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css">
+    <!-- <link type="text/css" rel="stylesheet" href="{% static '/css/style.css' %}"> -->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static '/css/Chart.css' %}">
+
     <!-- Import FontAwesome Icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <title>
         ImmunoTrak:: Real-time statistics
@@ -56,7 +56,7 @@
     </nav>
     {%block content%} replace this {%endblock%}
     <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{% static '/js/materialize.min.js' %}"></script>
     <script src="https://use.fontawesome.com/f204f9e510.js "></script>
 
 </body>
@@ -67,11 +67,11 @@
                 <!-- <p class="grey-text text-lighten-4 ">!insert social media and other related links!</p> -->
                 <div class="row s6">
                     <h6 class="white-text">Connect With Us:</h6>
-                    <a class="fab fa-github fa-2x " href="https://github.com/ogaroh "></a>
-                    <a class="fab fa-twitter fa-2x " href="# "></a>
-                    <a class="fab fa-whatsapp fa-2x " href="# "></a>
-                    <a class="fab fa-instagram fa-2x " href="# "></a>
-                    <!-- <a class="fab fa-google fa-2x " href="# "></a> -->
+                    <i class="fab fa-github fa-2x " href="https://github.com/ogaroh "></i>
+                    <i class="fab fa-twitter fa-2x " href="# "></i>
+                    <i class="fab fa-whatsapp fa-2x " href="# "></i>
+                    <i class="fab fa-instagram fa-2x " href="# "></i>
+                    <i class="fab fa-google fa-2x " href="# "></i>
                 </div>
             </div>
             <div class="col l4 offset-l2 s12 ">

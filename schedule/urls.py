@@ -4,5 +4,5 @@ from . import views
 from .views import schedule_view
 
 urlpatterns = [
-    path('schedules/', schedule_view),
+    path('', schedule_view),
 ]
