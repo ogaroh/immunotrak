@@ -1,29 +1,51 @@
 html {
     font-size: 14px;
+    min-height: 100%
 }
 
 body {
-    padding: 11px;
-    background-color: white;
+    padding: 0;
     margin: 0;
-    font-size: 100%;
-    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: white;
+    font-size: 16px;
+    text-align: justify;
+    flex-direction: column;
 }
 
-.btn {
-    border-radius: 100px;
-    padding: 0 26px;
+.chart-default {
+    padding: 2px;
+    align-content: inherit;
+    min-width: 100px;
+    min-height: 200px;
 }
 
-.mg {
-    margin-top: 50px;
+.around-chart {
+    padding: 2px;
+}
+
+.flow-text {
+    font-size: 16px;
 }
 
 
-/* icon syling */
+/* font awesome styling */
 
 a.fas,
 a.fab {
-    border: 1px solid white;
     color: white;
+}
+
+.fa-instagram,
+.fa-linkedin,
+.fa-twitter,
+.fa-whatsapp,
+.fa-github,
+.fa-envelope {
+    color: white;
+    padding: 2px;
 }

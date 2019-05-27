@@ -2,60 +2,67 @@
 
 <head>
     <link rel="stylesheet" href="{% static '/css/Chart.css' %}">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
-<div class="container row s12">
-    <div class="col s9">
-        <canvas id="vaccines" width="1000" height="700"></canvas>
+
+<body class="body">
+    <div class="container">
+        <div class="row s12">
+            <div class="col s8 chart-default">
+                <canvas id="vaccines" width="600" height="750"></canvas>
+            </div>
+            <div class="col s4 text-align justify around-chart flow-text">
+                <p>
+                    The ImmunoTrak Project is dedicated towards ensuring as many children in Kenya get vaccinated. This is in conjuction with the government's effort to reduce the number of child mortality cases due to some killer diseases that could have otherwise been
+                    prevented.
+                </p>
+                <p>
+                    This chart shows a summary of all the vaccines administered since the start of the program. This information is synchronously fetched and updated upon new vaccination cases. The platform is still under development.
+                </p>
+
+            </div>
+        </div>
     </div>
-    <div class="col s3 text-align right center">
-        <p>
-            The ImmunoTrak Project is dedicated towards ensuring as many children in Kenya get vaccinated. This is in conjuction with the government's effort to reduce the number of child mortality cases due to some killer diseases that could have otherwise been
-            prevented.
-        </p>
-        <p>
-            This chart shows a summary of all the vaccines administered since the start of the program. This information is synchronously fetched and updated upon new vaccination cases. The platform is still under development.
-        </p>
-    </div>
-</div>
-<script src="{% static '/js/Chart.min.js' %}"></script>
-<script>
-    var ctx = document.getElementById('vaccines').getContext('2d');
-    var vaccines = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Measles', 'Polio', 'Tetanus', 'Chickenpox', 'Meningitis', 'Yellow Fever', 'Influenza'],
-            datasets: [{
-                label: 'Number of vaccines administered',
-                data: [200, 400, 300, 50, 70, 200, 145],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 99, 152, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
+    <script src="{% static '/js/Chart.min.js' %}"></script>
+    <script>
+        var ctx = document.getElementById('vaccines').getContext('2d');
+        var vaccines = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Measles', 'Polio', 'Tetanus', 'Chickenpox', 'Meningitis', 'Yellow Fever', 'Influenza'],
+                datasets: [{
+                    label: 'Number of vaccines administered',
+                    data: [200, 400, 300, 50, 70, 200, 145],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 99, 152, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
                 }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
             }
-        }
-    });
-</script> {%endblock%}
+        });
+    </script>
+</body>{%endblock%}
