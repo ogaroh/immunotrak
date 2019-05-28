@@ -7,3 +7,4 @@ from django.http import HttpResponse
 # schedules view
 def schedule_view(request, *args, **kwargs):
     return render(request, "schedule.html", {})
+

@@ -28,6 +28,14 @@ def locations_view(request, *args, **kwargs):
     return render(request, "locations.html", {})
 
 
-# register view
+# medical view
 def medical_view(request, *args, **kwargs):
     return render(request, "medical.html", {})
+
+
+
+# register view
+def register_view (request):
+    return render(request, "register.html", {})
+
+
