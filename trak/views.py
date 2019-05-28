@@ -29,5 +29,5 @@ def locations_view(request, *args, **kwargs):
 
 
 # register view
-def register_view(request, *args, **kwargs):
-    return render(request, "register.html", {})
+def medical_view(request, *args, **kwargs):
+    return render(request, "medical.html", {})
