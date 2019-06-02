@@ -49,3 +49,26 @@ a.fab {
     color: white;
     padding: 2px;
 }
+
+.primary-color {
+    color: #2C001E;
+}
+
+.secondary-color {
+    color: #56013B;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #880e4f !important;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #880e4f !important;
+    box-shadow: 0 1px 0 0 #880e4f !important;
+}
