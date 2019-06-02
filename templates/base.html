@@ -26,13 +26,21 @@
 
 </head>
 
-<body class="body">
+<body class="col s12">
     <nav class="">
         <div class="nav-wrapper">
             <ul id="row nav-mobile" class="left">
                 <li>
-                    <a href="#" class="fas fa-bars fa-2x"></a>
+                    <a class="dropdown-trigger fas fa-bars fa-2x" data-target='options'></a>
                     <!--options-->
+                    <!-- Dropdown Structure -->
+                    <ul id='options' class='dropdown-content'>
+                        <li><a href="/medical"><i class="fas fa-user-md"></i>Medical</a></li>
+                        <li><a href="/locations"><i class="fas fa-hospital"></i>Locations</a></li>
+                        <li><a href="/schedule"><i class="fas fa-calendar-check"></i>Schedules</a></li>
+                        <li><a href="/charts"><i class="fas fa-chart-bar"></i>Stats</a></li>
+                        <li><a href="/admin"><i class="fas fa-cogs"></i>Admin</a></li>
+                    </ul>
                 </li>
             </ul>
             <a href="/home" class="brand-logo center">ImmunoTrak</a>
@@ -61,6 +69,11 @@
     <!-- Compiled and minified JavaScript -->
     <script src="{% static '/js/materialize.min.js' %}"></script>
     <script src="https://use.fontawesome.com/f204f9e510.js "></script>
+    <script>
+        //jQuery
+
+        $('.dropdown-trigger').dropdown();
+    </script>
 
 </body>
 <footer class="page-footer">
