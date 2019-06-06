@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'trak.apps.TrakConfig',  # add trak app
-    'schedule.apps.ScheduleConfig', # add schedule app
+    'schedule.apps.ScheduleConfig',  # add schedule app
 ]
 
 MIDDLEWARE = [
@@ -120,3 +120,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/'),
 ]
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
