@@ -35,7 +35,12 @@
                     <!--options-->
                     <!-- Dropdown Structure -->
                     <ul id='options' class='dropdown-content'>
-                        <li><a href="/medical/register"><i class="fas fa-user-md"></i>Child Registration</a></li>
+                        <li><i class="fas fa-user-md"></i>
+                            <p>Welcome, {{request.user.username}}</p>
+                        </li>
+                        <li>
+                            <a href="/medical/register"><i class="fas fa-baby"></i>Children</a>
+                        </li>
                         <li><a href="/locations"><i class="fas fa-hospital"></i>Locations</a></li>
                         <li><a href="/schedule"><i class="fas fa-calendar-check"></i>Schedules</a></li>
                         <li><a href="/charts"><i class="fas fa-chart-bar"></i>Statistics</a></li>
