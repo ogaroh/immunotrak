@@ -4,6 +4,25 @@
     <link rel="stylesheet" href="{% static '/css/Chart.css' %}">
 </head>
 
+{%block jquery%}
+<script>
+    var endpoint = '/api/data/'
+
+    $.ajax({
+        method: 'GET',
+        url: endpoint,
+        success: function(data) {
+            console.log(data)
+            console.log(data.vaccines * 1000)
+        },
+        error: function(error_data) {
+            console.log('error')
+            console.log(error_data)
+        }
+    })
+</script>
+{%endblock%}
+
 <body class="body">
     <div class="container s12 center">
         <h5 class="card-title brand-logo center">
@@ -19,7 +38,7 @@
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart5">Chart 5</a></li>
                 </ul>
             </div>
-            <div id="chart1" class="row s12">
+            <div id="chart1" class="row s12" url-endpoint='{% url "api-data"%}'>
                 <p class="col s2">
                     Chart 1
                 </p>
@@ -61,6 +80,7 @@
             </div>
         </div>
     </div>
+
     <script src="{% static '/js/Chart.min.js' %}"></script>
     <script>
         $(document).ready(function() {
