@@ -5,7 +5,7 @@ from . import views
 from .views import get_data, ChartsView, ChartData
 
 urlpatterns = [
-    url(r'^$', ChartsView.as_view(), name='charts'),
+    path('chart/', ChartsView.as_view()),
     url(r'^api/data/$', get_data, name='api-data'),
     url(r'^api/chart/data/$', ChartData.as_view()),
 ]

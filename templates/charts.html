@@ -21,8 +21,6 @@
             console.log(error_data)
         }
     })
-
-
 </script>
 {%endblock%}
 
@@ -35,7 +33,7 @@
             <div class="col s12">
                 <ul class="tabs tabs-fixed-width z-depth-1">
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart1">Chart 1</a></li>
-                    <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart2">Chart 2</a></li>
+                    <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="/chart">Chart 2</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart3">Chart 3</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart4">Chart 4</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart5">Chart 5</a></li>
@@ -85,7 +83,7 @@
     </div>
 
     <script src="{% static '/js/Chart.min.js' %}">
-</script>
+    </script>
     <script>
         $(document).ready(function() {
             $('.tabs').tabs();
