@@ -1,1 +1,27 @@
-{%extends 'base.html'%} {%load static%}
+{%extends 'base.html'%} {%load static%} {%block title%}Vaccination Appointment{%endblock%}
+
+<head>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+
+{%block content%}
+<div class="container col s12 div">
+    <div class="col s9 card center">
+        <div class="card-content">
+            <p class="card-title">Make Vaccination Appointment</p>
+            <br>
+            <div class="col s6">
+                <form>
+                    <input type="text">
+                </form>
+                <br>
+                <div class="card-action">
+                    <!-- insert valid urls -->
+                    <a href="">Cancel</a>
+                    <a href="">Proceed</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

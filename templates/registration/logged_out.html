@@ -1,12 +1,18 @@
-{% extends "base.html" %} {%block title%}Logged out{%endblock%}{%block navbar%}{%endblock%}{% block content %}
+{% extends "base.html" %} {%load static%}{%block title%}Logged out{%endblock%}{%block navbar%}{%endblock%}{% block content %}
+
 <div class="container col s9">
     <div class="col s9 card center">
-        <p class="card-title">You've been logged out</p>
-        <div class="col s6">
-            <br>
-            <a href="{% url 'login'%}" class="cyan darken-4">Click here to login again.</a>
-            <br> {% endblock %}
+        <div class="card-content">
+            <p class="card-title">You've been logged out</p>
+            <div class="col s6">
+                <p>You have no access the platform's core functionality</p>
+                <br>
+                <div class="card-action">
+                    <a href="{% url 'login'%}">Click here to login.</a>
+                    <br> {% endblock %}
+                </div>
+                {%block footer%} {%endblock%}
+            </div>
         </div>
-        {%block footer%} {%endblock%}
     </div>
 </div>
