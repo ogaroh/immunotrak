@@ -6,7 +6,8 @@
 
 {%block jquery%}
 <script>
-    var endpoint = '/api/data/'
+    var endpoint = '/api/chart/data/'
+    var defaultData = []
 
     $.ajax({
         method: 'GET',
@@ -20,6 +21,8 @@
             console.log(error_data)
         }
     })
+
+
 </script>
 {%endblock%}
 
@@ -81,7 +84,8 @@
         </div>
     </div>
 
-    <script src="{% static '/js/Chart.min.js' %}"></script>
+    <script src="{% static '/js/Chart.min.js' %}">
+</script>
     <script>
         $(document).ready(function() {
             $('.tabs').tabs();
