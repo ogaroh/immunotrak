@@ -1,3 +1,11 @@
-{% extends "base.html" %} {% block content %}
-<p>You're logged out!</p>
-<a href="{% url 'login'%}">Click here to login again.</a> {% endblock %}
+{% extends "base.html" %} {%block title%}Logged out{%endblock%}{%block navbar%}{%endblock%}{% block content %}
+<div class="container">
+    <div class="col s6">
+        <div class="col s3">
+            <p>You're logged out!</p>
+        </div>
+        <br>
+        <a href="{% url 'login'%}" class="cyan darken-4">Click here to login again.</a> {% endblock %}>
+    </div>
+    {%block footer%} {%endblock%}
+</div>
