@@ -4,8 +4,7 @@
     <link rel="stylesheet" href="{% static '/css/Chart.css' %}">
 </head>
 
-{%block jquery%}
-<script>
+<!-- <script>
     var endpoint = '/api/chart/data/'
     var defaultData = []
 
@@ -21,8 +20,7 @@
             console.log(error_data)
         }
     })
-</script>
-{%endblock%}
+</script> -->
 
 <body class="body">
     <div class="container s12 center">
@@ -33,13 +31,13 @@
             <div class="col s12">
                 <ul class="tabs tabs-fixed-width z-depth-1">
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart1">Chart 1</a></li>
-                    <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="/chart">Chart 2</a></li>
+                    <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart2">Chart 2</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart3">Chart 3</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart4">Chart 4</a></li>
                     <li class="tab col s3 waves-effect waves-heavy"><a class="active" href="#chart5">Chart 5</a></li>
                 </ul>
             </div>
-            <div id="chart1" class="row s12" url-endpoint='{% url "api-data"%}'>
+            <div id="chart1" class="row s12">
                 <p class="col s2">
                     Chart 1
                 </p>

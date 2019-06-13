@@ -10,6 +10,9 @@ class Vaccine(models.Model):
     quantity = models.IntegerField()
     available = models.BooleanField(default=True)
 
+    def __str__(self):
+        return self.name
+
 
 # parent model
 class Parent(models.Model):
@@ -18,7 +21,9 @@ class Parent(models.Model):
     last_name = models.CharField(max_length=50)
     id_number = models.DecimalField(decimal_places=0, max_digits=50)
     phone_number = models.DecimalField(decimal_places=0, max_digits=10)
-    # children = models.ForeignKey(Child, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
 
 
 # child model
@@ -29,8 +34,14 @@ class Child(models.Model):
     dob = models.DateField(null=False)
     parent = models.ForeignKey(Parent, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
 
 # location model
 class Location(models.Model):
     county = models.CharField(max_length=50)
     vaccinations = models.IntegerField()  # insert foreign from vaccination model
+
+    def __str__(self):
+        return self.county

@@ -1,16 +1,14 @@
-{% extends "base.html" %} {%load static%} {%block navbar%} {%endblock%}{% block content %} {% if form.errors %}
+{% extends "base.html" %} {%load static%} {%block title%}Login {%endblock%} {%block navbar%} {%endblock%} {% block content %} {% if form.errors %}
 
-<head>
-    <link rel="stylesheet" href="{% static '/css/style.css' %}">
-</head>
 <div class="container s9 center">
-    <p>Your username and password didn't match. Please try again.</p>
+    <p style="color: #d31f1f">Your username and password didn't match. Please try again.</p>
     {% endif %} {% if next %} {% if user.is_authenticated %}
-    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+    <p style="color: #d31f1f">Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
     {% else %}
-    <p>Please login to see this page.</p>
+    <p style="color: #d31f1f">Please login to see this page.</p>
     {% endif %} {% endif %}
 </div>
+
 <div class="container s9">
     <div class="col s6 card center">
         <div class="card-content">
@@ -28,10 +26,12 @@
                         <td>{{ form.password }}</td>
                     </tr>
                 </table>
-                <input class="button btn center div" type="submit" value="login" />
-                <input type="hidden" name="next" value="{{ next }}" /> {# Assumes you setup the password_reset view in your URLconf #}
-                <div class="card-action">
-                    <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+                <div class="card-action row s6 center ">
+                    <input class="button btn center" type="submit" value="login" />
+                    <input type="hidden" name="next" value="{{ next }}" />
+                    <br>
+                    <br>
+                    <p><a href="{% url 'password_reset' %}">Lost password? Click here to reset.</a></p>
                 </div>
             </form>
 
