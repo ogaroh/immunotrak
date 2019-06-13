@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Vaccine, Child, Parent, Location
+from .models import Vaccine, Child, Parent, Location, County
 import schedule.admin
 import charts.admin
 
@@ -13,8 +13,24 @@ class VaccineAdmin(admin.ModelAdmin):
     list_per_page = 30
 
 
+class ParentAdmin(admin.ModelAdmin):
+    list_display = ('id', 'first_name', 'last_name', 'id_number', 'phone_number')
+    list_display_links = ('id', 'first_name', 'last_name','id_number', 'phone_number')
+    search_fields = ('id', 'first_name', 'last_name', 'id_number', 'phone_number')
+    list_per_page = 40
+
+
+
+class ChildAdmin(admin.ModelAdmin):
+    list_display = ('id', 'first_name', 'last_name', 'dob', 'parent')
+    list_display_links = ('id', 'first_name', 'last_name','dob', 'parent')
+    search_fields = ('id', 'first_name', 'last_name', 'dob', 'parent')
+    list_per_page = 40  
+
+
 # Register your models here.
 admin.site.register(Vaccine, VaccineAdmin)
-admin.site.register(Child)
-admin.site.register(Parent)
+admin.site.register(Child, ChildAdmin)
+admin.site.register(Parent, ParentAdmin)
 admin.site.register(Location)
+admin.site.register(County)
