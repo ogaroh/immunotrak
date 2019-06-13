@@ -4,10 +4,10 @@ from .models import Schedule
 
 # modify outlines in admin page
 class ScheduleAdmin(admin.ModelAdmin):
-    list_display = ('id', 'type', 'vaccine', 'child', 'date', 'description')
+    list_display = ('id', 'vaccine', 'child', 'date', 'description')
     list_display_links = ('id', 'vaccine', 'child','date')
-    search_fields = ('id','type')
-    list_per_page = 25
+    search_fields = ('id','description')
+    list_per_page = 30
 
 
 # Register your models here.
