@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Vaccine, Child, Parent, Location, County
 import schedule.admin
 import charts.admin
+import stats.admin
 
 admin.site.site_header = "ImmunoTrak"
 admin.site.site_title = "ImmunoTrak"

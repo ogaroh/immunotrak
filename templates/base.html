@@ -38,8 +38,8 @@
                     <!--options-->
                     <!-- Dropdown Structure -->
                     <ul id='options' class='dropdown-content'>
-                        <li><i class="fas fa-user-md"></i>
-                            <p>Welcome, {{request.user.username}}</p>
+                        <li><i class="fas fa-user align-right"></i>
+                            <p>Welcome, {{request.user.first_name}}</p>
                         </li>
                         <li>
                             <a href="/medical/register"><i class="fas fa-baby"></i>Children</a>
@@ -71,7 +71,19 @@
             </ul>
         </div>
     </nav>
-    {%endblock%} {%block content%} replace this {%endblock%}
+
+    {%endblock%}
+    <style>
+        /*Max height overrides height*/
+        
+        .with-min-height {
+            min-height: 500px;
+            background: #ffffff;
+        }
+    </style>
+    <div class="with-min-height">
+        {%block content%} replace this {%endblock%}
+    </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->

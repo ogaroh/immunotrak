@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'trak.apps.TrakConfig',  # add trak app
     'schedule.apps.ScheduleConfig',  # add schedule app
     'charts.apps.ChartsConfig', # add charts app
+    'stats.apps.StatsConfig', # add stats app
     'rest_framework', # add the django rest framework
 ]
 
