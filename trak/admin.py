@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Vaccine, Child, Parent, Location, County
+from .models import Vaccine, Child, Parent, Location
 import schedule.admin
 import charts.admin
 import stats.admin
@@ -34,4 +34,3 @@ admin.site.register(Vaccine, VaccineAdmin)
 admin.site.register(Child, ChildAdmin)
 admin.site.register(Parent, ParentAdmin)
 admin.site.register(Location)
-admin.site.register(County)

@@ -1,8 +1,19 @@
 from django.db import models
+from django.forms import ModelForm
 
-# Create your models here.
+GENDER_CHOICES = [
+    ('male', 'Male'),
+    ('female', 'Female'),
+]
 
 
+COUNTY_CHOICES = [
+    ('mombasa', 'Mombasa'),
+    ('nairobi', 'Nairobi'),
+    ('nakuru', 'Nakuru'),
+]
+
+# Create your models here
 # Vaccines model
 class Vaccine(models.Model):
     name = models.CharField(max_length=50)
@@ -32,21 +43,17 @@ class Child(models.Model):
     middle_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50)
     dob = models.DateField(null=False)
+    gender = models.CharField(max_length = 10, choices=GENDER_CHOICES)
     parent = models.ForeignKey(Parent, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
 
 
-# counties model
-class County(models.Model):
-    name = models.CharField(max_length=100)
-    code = models.IntegerField()
-    vaccinations = models.ForeignKey(Vaccine, on_delete=models.CASCADE)
 
 # location model
 class Location(models.Model):
-    county = models.CharField(max_length=50)
+    county = models.CharField(max_length=20, choices=COUNTY_CHOICES)
     vaccinations = models.IntegerField()  # insert foreign from vaccination model
 
     def __str__(self):
