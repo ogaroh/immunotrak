@@ -39,10 +39,10 @@
                     <!-- Dropdown Structure -->
                     <ul id='options' class='dropdown-content'>
                         <li><i class="fas fa-user align-right"></i>
-                            <p>Welcome, {{request.user.first_name}}</p>
+                            <p>Welcome, <strong>{{request.user.first_name}}</strong></p>
                         </li>
                         <li>
-                            <a href="/medical/register"><i class="fas fa-baby"></i>Children</a>
+                            <a href="/medical"><i class="fas fa-baby"></i>Children</a>
                         </li>
                         <li><a href="/locations"><i class="fas fa-hospital"></i>Locations</a></li>
                         <li><a href="/schedule"><i class="fas fa-calendar-check"></i>Schedules</a></li>
@@ -54,7 +54,7 @@
             <a href="/home" class="brand-logo center">ImmunoTrak</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li>
-                    <a href="/medical/register" class="fas fa-user-md fa-2x"></a>
+                    <a href="/medical" class="fas fa-user-md fa-2x"></a>
                 </li>
                 <li>
                     <a href="/locations" class="fas fa-hospital fa-2x"></a>
@@ -77,6 +77,8 @@
         /*Max height overrides height*/
         
         .with-min-height {
+            margin: 5px;
+            padding: 10px;
             min-height: 500px;
             background: #ffffff;
         }

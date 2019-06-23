@@ -1,9 +1,52 @@
-{%extends 'base.html'%} {%block content%}
-<div class="row s6">
-    <div class="container col s12">
-        <div class="card">
-            <form action="" id="register"></form>
+{%extends 'base.html'%} {%block content%} {%block medical%}
+<div class="row s12">
+    <div class="container col s6 center">
+        <div class="card blue-grey darken-2 white-text">
+            <p class="card-title">Nurses</p>
+            <div class="card-content">
+                <p> Please choose appropriate action</p>
+                <div class="card-action">
+                    <a href="">Vaccination</a>
+                    <a href="">Schedules</a>
+                    <a href="">Others</a>
+                    <a href="">Account</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-{%block medical%} replace this with something relevant {%endblock%} {%endblock%}
+    <div class="container col s6 center">
+        <div class="card blue-grey darken-2 white-text">
+            <p class="card-title">Medical Officers</p>
+            <div class="card-content">
+                <p>Choose appropriate action below:</p>
+                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum hic porro, earum nostrum unde placeat quisquam deleniti nesciunt. Ratione harum possimus dolorem magnam, animi error culpa saepe! Itaque, at.</p> -->
+                <div class="card-action">
+                    <a href="">Action 1</a>
+                    <a href="">Action 2</a>
+                    <a href="">Action 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>{%endblock%}
+<hr>
+<br>
+<div class="container row s12 center">
+    <div class="col s3">
+        <a class="btn waves-effect waves-heavy btn-large" href=""><i class="fas fa-home left"></i>Home</a>
+    </div>
+
+    <div class="col s3">
+        <a class="btn waves-effect waves-heavy btn-large" href=""><i class="fas fa-chart-line left"></i>Statistics</a>
+    </div>
+
+    <div class="col s3">
+        <a class="btn waves-effect waves-heavy btn-large" href=""><i class="fas fa-notes-medical left"></i>Registration</a>
+    </div>
+
+    <div class="col s3">
+        <a class="btn waves-effect waves-heavy btn-large" href=""><i class="far fa-user left"></i>Account</a>
+    </div>
+
+</div>{%endblock%}
