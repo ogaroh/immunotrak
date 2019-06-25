@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% bloxk title %} Online Documentation | ImmunoTrak {% endblock%} {% block navbar%}
+{% extends 'base.html' %} {% block title %} Online Documentation | ImmunoTrak {% endblock%} {% block navbar%}
 <nav class="">
     <div class="nav-wrapper">
         <ul id="row nav-mobile" class="left">
@@ -6,15 +6,51 @@
                 <a class="fas fa-home fa-2x" href="/home"></a>
             </li>
         </ul>
-        <a href="/home" class="brand-logo center">Online Help: Documentation</a>
+        <a href="/help" class="brand-logo center">Online Help: Documentation</a>
         <ul id="nav-mobile" class="right">
             <li>
-                <a href="/search" class="fas fa-user-md fa-2x"></a>
+                <a class="fas fa-user-times fa-2x" href="/admin/logout"></a>
             </li>
             <li>
-                <a href="/admin/logout"><i class="fas fa-user-times"></i>Log Out</a>
+                <a href="/admin/logout">Log Out</a>
             </li>
         </ul>
     </div>
 </nav>
-{% endblock %}
+{% endblock %} {% block content %} {% endblock %} {% block footer %}
+<footer>
+    <div class="container ">
+        <div class="row ">
+            <div class="col l6 s12 ">
+                <!-- <p class="grey-text text-lighten-4 ">!insert social media and other related links!</p> -->
+                <div class="row s6">
+                    <h6 class="white-text">Connect With Us:</h6>
+
+                    <a href="https://github.com/ogaroh"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://twitter.com/?"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="https://mail.google.com/compose"><i class="fas fa-envelope fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+
+                </div>
+            </div>
+            <div class="col l4 offset-l2 s12 ">
+                <h6 class="white-text ">Quick Links</h6>
+                <ul>
+                    <li><a class="grey-text text-lighten-3 " href="/home ">Home</a></li>
+                    <li><a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
+                    <li><a class="grey-text text-lighten-3 " href="/help ">Help</a></li>
+                    <li><a class="grey-text text-lighten-3 " href="/contact ">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright ">
+        <div class="container ">
+            © ImmunoTrak 2019
+            <a class="grey-text text-lighten-4 right " href="https://ogaroh.github.io ">Contact the developer</a>
+        </div>
+    </div>
+</footer>
+</footer>{% endblock %}

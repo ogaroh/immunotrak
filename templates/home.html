@@ -4,9 +4,23 @@
     <link rel="stylesheet" href="{% static '/css/Chart.css' %}">
 </head>
 
+<style>
+    .chart-border {
+        border-bottom: 5px solid;
+        border-radius: 4px;
+        border-color: #006064;
+    }
+    
+    .p-border {
+        border-right: 6px solid;
+        border-color: #006064;
+        border-radius: 4px;
+    }
+</style>
+
 <body class="body">
     <div class="row s12">
-        <div class="col s6">
+        <div class="col s6 chart-border">
             <br>
             <hr>
             <h5 class="flow-text"> Vaccines administered </h5>
@@ -16,16 +30,18 @@
         </div>
         <div class="col s6 text-align justified">
             <!-- description -->
-            <p>
-                The ImmunoTrak Project is dedicated towards ensuring as many children in Kenya get vaccinated. This is in conjuction with the government's effort to reduce the number of child mortality cases due to some killer diseases that could have otherwise been
-                prevented.
-            </p>
-            <p>
-                This chart shows a summary of all the vaccines administered since the start of the program. This information is synchronously fetched and updated upon new vaccination cases. The platform is still under development.
-            </p>
-            <hr>
-            <div>
-                <h5 class="flow-text">Available Vaccines</h5>
+            <div class="p-border">
+                <p>
+                    The ImmunoTrak Project is dedicated towards ensuring as many children in Kenya get vaccinated. This is in conjuction with the government's effort to reduce the number of child mortality cases due to some killer diseases that could have otherwise been
+                    prevented.
+                </p>
+                <p>
+                    This chart shows a summary of all the vaccines administered since the start of the program. This information is synchronously fetched and updated upon new vaccination cases. The platform is still under development.
+                </p>
+                <hr>
+            </div>
+            <h5 class="flow-text">Available Vaccines</h5>
+            <div class="p-border">
                 <hr> {% block vaccine_list %} {% for vaccine in object_list %}
                 <p>
                     {{ vaccine.name }}
