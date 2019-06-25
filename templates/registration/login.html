@@ -8,11 +8,20 @@
     <p style="color: #d31f1f">Please login to see this page.</p>
     {% endif %} {% endif %}
 </div>
-
+<style>
+    /*Max height overrides height*/
+    
+    .with-min-height {
+        margin: 5px;
+        padding: 10px;
+        min-height: 100px;
+        background: #FFFFFF;
+    }
+</style>
 <div class="container s9">
-    <div class="col s6 card center">
+    <div class="col s6 card center with-min-height">
         <div class="card-content">
-            <h5 class="card-title center">ImmunoTrak Login</h5>
+            <h4 class=" flow-text card-title center">ImmunoTrak Login</h4>
             <form method="post" action="{% url 'login' %}">
                 {% csrf_token %}
                 <table>

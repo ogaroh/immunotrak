@@ -1,17 +1,28 @@
 {% extends "base.html" %} {%load static%}{%block title%}Logged out{%endblock%}{%block navbar%}{%endblock%}{% block content %}
+<style>
+    /*Max height overrides height*/
+    
+    .with-min-height {
+        margin-left: auto;
+        margin-right: auto;
+        place-items: center;
+    }
+</style>
 
-<div class="container col s9">
-    <div class="col s9 card center">
-        <div class="card-content">
+<div class="container col s9 with-min-height">
+    <div class="col s9 center">
+        <div class="card blue-grey darken-2 white-text">
             <p class="card-title">You've been logged out</p>
-            <div class="col s6">
-                <p>You have no access the platform's core functionality</p>
-                <br>
-                <div class="card-action">
-                    <a href="{% url 'login'%}">Click here to login.</a>
-                    <br> {% endblock %}
+            <div class="card-content">
+                <div class="col s6">
+                    <p>You have no access the platform's core functionality</p>
+                    <br>
+                    <div class="card-action">
+                        <a href="{% url 'login'%}">Click here to login.</a>
+                        <br> {% endblock %}
+                    </div>
+                    {%block footer%} {%endblock%}
                 </div>
-                {%block footer%} {%endblock%}
             </div>
         </div>
     </div>

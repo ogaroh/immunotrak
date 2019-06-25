@@ -22,7 +22,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {%block extrahead%}{%endblock%}
-    <meta content="#551B2E" name="theme-color">
+    <meta content="#085563" name="theme-color">
 
 </head>
 
@@ -38,16 +38,18 @@
                     <!--options-->
                     <!-- Dropdown Structure -->
                     <ul id='options' class='dropdown-content'>
-                        <li><i class="fas fa-user align-right"></i>
-                            <p>Welcome, <strong>{{request.user.first_name}}</strong></p>
+                        <li>
+                            <p>{{request.user.first_name}}</p><span><i class="fas fa-user-tie"></i>
+                            </span>
                         </li>
                         <li>
                             <a href="/medical"><i class="fas fa-baby"></i>Children</a>
                         </li>
                         <li><a href="/locations"><i class="fas fa-hospital"></i>Locations</a></li>
                         <li><a href="/schedule"><i class="fas fa-calendar-check"></i>Schedules</a></li>
-                        <li><a href="/charts"><i class="fas fa-chart-bar"></i>Statistics</a></li>
+                        <li><a href="/charts"><i class="fas fa-chart-line"></i>Statistics</a></li>
                         <li><a href="/admin"><i class="fas fa-cogs"></i>Advanced</a></li>
+                        <li><a href="/admin/logout"><i class="fas fa-user-times"></i>Log Out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -63,7 +65,7 @@
                     <a href="/schedule" class="fas fa-calendar-check fa-2x"></a>
                 </li>
                 <li>
-                    <a href="/charts" class="fas fa-chart-bar fa-2x"></a>
+                    <a href="/charts" class="fas fa-chart-line fa-2x"></a>
                 </li>
                 <li>
                     <a href="/admin" class="fas fa-cogs fa-2x "></a>
@@ -120,8 +122,8 @@
                 <h6 class="white-text ">Quick Links</h6>
                 <ul>
                     <li><a class="grey-text text-lighten-3 " href="/charts ">Charts & Statistics</a></li>
-                    <li>
-                        <a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
+                    <li><a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
+                    <li><a class="grey-text text-lighten-3 " href="/help ">Help</a></li>
                     <li><a class="grey-text text-lighten-3 " href="/contact ">Contact Us</a></li>
                 </ul>
             </div>
