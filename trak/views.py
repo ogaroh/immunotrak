@@ -18,6 +18,14 @@ class LocationsView(ListView):
     template_name = 'locations.html'
 
 
+class MedicalView(ListView):
+    model = trak_models.Child
+    context_object_name = 'children_list'
+    template_name = 'medical.html'
+
+
+
+
 # all charts view
 def charts_view(request, *args, **kwargs):
     return render(request, "charts.html", {})
@@ -41,9 +49,7 @@ def locations_view(request, *args, **kwargs):
     return render(request, "locations.html", {})
 
 
-# medical view
-def medical_view(request, *args, **kwargs):
-    return render(request, "medical.html", {})
+
 
 
 # register view

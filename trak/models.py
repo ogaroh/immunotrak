@@ -2,8 +2,8 @@ from django.db import models
 from django.forms import ModelForm
 
 GENDER_CHOICES = [
-    ('male', 'Male'),
-    ('female', 'Female'),
+    ('Male', 'Male'),
+    ('Female', 'Female'),
 ]
 
 COUNTY_CHOICES = [

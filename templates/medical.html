@@ -1,7 +1,7 @@
 {%extends 'base.html'%} {%block content%} {%block medical%}
 <div class="row s12">
     <div class="container col s6 center">
-        <div class="card blue-grey darken-2 white-text">
+        <div class="card blue-grey darken-3 white-text">
             <p class="card-title">Nurses</p>
             <div class="card-content">
                 <p> Please choose appropriate action</p>
@@ -15,16 +15,21 @@
         </div>
     </div>
     <div class="container col s6 center">
-        <div class="card blue-grey darken-2 white-text">
-            <p class="card-title">Medical Officers</p>
+        <div class="card blue-grey darken-3 white-text">
+            <p class="card-title">Children In Database</p>
             <div class="card-content">
-                <p>Choose appropriate action below:</p>
-                <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum hic porro, earum nostrum unde placeat quisquam deleniti nesciunt. Ratione harum possimus dolorem magnam, animi error culpa saepe! Itaque, at.</p> -->
+                {% block children_list %} {% for child in object_list %}
+                <p>
+                    {{ child.first_name}} {{ child.last_name}} Gender: {{ child.gender }}
+                    <hr>
+                </p>
+                {% endfor %}
                 <div class="card-action">
-                    <a href="">Action 1</a>
-                    <a href="">Action 2</a>
-                    <a href="">Action 3</a>
+                    <a href="">Edit Information</a>
+                    <a href="">Refresh</a>
+                    <a href="">Parents</a>
                 </div>
+                {% endblock %}
             </div>
         </div>
     </div>
