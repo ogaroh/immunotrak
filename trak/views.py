@@ -24,9 +24,9 @@ class MedicalView(ListView):
     template_name = 'medical.html'
 
 
-# all charts view
-def charts_view(request, *args, **kwargs):
-    return render(request, "charts.html", {})
+# # all charts view
+# def charts_view(request, *args, **kwargs):
+#     return render(request, "chart.html", {})
 
 # online help view
 

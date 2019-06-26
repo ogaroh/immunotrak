@@ -1,11 +1,8 @@
 from django.urls import path
-from django.conf.urls import url
 
-from . import views
-from .views import get_data, ChartsView, ChartData
+from .views import ChartData, ChartsView
 
 urlpatterns = [
-    path('chart/', ChartsView.as_view()),
-    url(r'^api/data/$', get_data, name='api-data'),
-    url(r'^api/chart/data/$', ChartData.as_view()),
+    path('', ChartsView.as_view(), name="charts"),
+    path('api/chart/data/', ChartData.as_view()),  # new
 ]
