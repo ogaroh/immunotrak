@@ -83,7 +83,7 @@ class Parent(models.Model):
 
 
 # child model
-class Child(models.Model):
+class Kid(models.Model):
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50)

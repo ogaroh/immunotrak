@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Vaccine, Child, Parent, Location
+from .models import Vaccine, Kid, Parent, Location
 import schedule.admin
 import charts.admin
 import stats.admin
@@ -22,7 +22,7 @@ class ParentAdmin(admin.ModelAdmin):
 
 
 
-class ChildAdmin(admin.ModelAdmin):
+class KidAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'dob', 'parent')
     list_display_links = ('id', 'first_name', 'last_name','dob', 'parent')
     search_fields = ('id', 'first_name', 'last_name', 'dob', 'parent')
@@ -31,6 +31,6 @@ class ChildAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Vaccine, VaccineAdmin)
-admin.site.register(Child, ChildAdmin)
+admin.site.register(Kid, KidAdmin)
 admin.site.register(Parent, ParentAdmin)
 admin.site.register(Location)
