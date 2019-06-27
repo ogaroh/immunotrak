@@ -1,0 +1,31 @@
+{% extends 'base_1.html' %}
+{% block content %}
+<div class="row center">
+    <hr>
+    <h1>TABLES</h1>
+    <hr>
+
+    <div class="container center">
+        <div class="col-sm-12">
+            <h4>
+                All Vaccines
+            </h4>
+            <table>
+                <tr>
+                    <th>Vaccines</th>
+                    <th>Description</th>
+                    <th>Available</th>
+                </tr>
+
+                {% for vaccine in object_list %}
+                <tr>
+                    <td>{{ vaccine.name }}</td>#
+                    <td>{{ vaccine.description }}</td>
+                    <td>{{ vaccine.available }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

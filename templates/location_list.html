@@ -1,0 +1,30 @@
+{% extends 'base_1.html' %}
+{% block content %}
+<div class="row center">
+    <hr>
+    <h1>TABLES</h1>
+    <hr>
+
+    <div class="container center">
+        <div class="col-sm-12">
+            <h4>
+                All Locations
+            </h4>
+            <table>
+                <tr>
+                    <th>County</th>
+                    <th>Vaccinations</th>
+                </tr>
+
+                {% for location in object_list %}
+                <tr>
+                    <td>{{ location.county }}</td>
+                    <td>{{ location.vaccinations }}</td>
+                </tr>
+                <br>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

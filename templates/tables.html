@@ -1,0 +1,33 @@
+{% extends 'base_1.html' %}
+{% block content %}
+<div class="row center">
+    <hr>
+    <h1>TABLES</h1>
+    <hr>
+
+    <div class="container center">
+        <div class="col-sm-12">
+            <h4>
+                All Children
+            </h4>
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date Of Birth</th>
+                    <th>Parent's Name</th>
+                </tr>
+
+                {% for child in object_list %}
+                <tr>
+                    <td>{{ child.first_name }}</td>#
+                    <td>{{ child.last_name }}</td>
+                    <td>{{ child.dob }}</td>
+                    <td>{{ child.parent }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

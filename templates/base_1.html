@@ -1,16 +1,84 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    <title>Charts</title>
+
+    <!-- Import Local custom style-->
+    <link type="text/css" rel="stylesheet" href="{% static '/css/materialize.css' %}">
+    <link rel="stylesheet" href="{% static '/css/fontawesome.css' %}">
+
+    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   {% block title %} <title>ImmunoTrak Charts</title>{%endblock%}
 
     {% include 'base/css.html' %}
     {% include 'base/bootstrap_defaults.html' %}
 </head>
 <body>
+        <style>
+            .chart-border {
+                border-bottom: 5px solid;
+                border-radius: 4px;
+                border-color: #006064;
+            }
+            
+            .p-border {
+                border-right: 6px solid;
+                border-color: #006064;
+                border-radius: 4px;
+            }
+        </style>
+        {%block navbar%}
+        <nav class="">
+            <div class="nav-wrapper">
+                <ul id="row nav-mobile" class="left">
+                    <li>
+                        <a class="dropdown-trigger fas fa-bars fa-2x" data-target="options" data-constrainwidth="false"></a>
+                        <!--options-->
+                        <!-- Dropdown Structure -->
+                        <ul id='options' class='dropdown-content'>
+                            <li>
+                                <p>{{request.user.first_name}}</p><span><i class="fas fa-user-tie"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <a href="/medical"><i class="fas fa-baby"></i>Children</a>
+                            </li>
+                            <li><a href="/locations"><i class="fas fa-hospital"></i>Locations</a></li>
+                            <li><a href="/schedule"><i class="fas fa-calendar-check"></i>Schedules</a></li>
+                            <li><a href="/charts"><i class="fas fa-chart-line"></i>Statistics</a></li>
+                            <li><a href="/admin"><i class="fas fa-cogs"></i>Advanced</a></li>
+                            <li><a href="/admin/logout"><i class="fas fa-user-times"></i>Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="/home" class="brand-logo center">ImmunoTrak</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/medical" class="fas fa-user-md fa-2x"></a>
+                    </li>
+                    <li>
+                        <a href="/locations" class="fas fa-hospital fa-2x"></a>
+                    </li>
+                    <li>
+                        <a href="/schedule" class="fas fa-calendar-check fa-2x"></a>
+                    </li>
+                    <li>
+                        <a href="/charts" class="fas fa-chart-line fa-2x"></a>
+                    </li>
+                    <li>
+                        <a href="/admin" class="fas fa-cogs fa-2x "></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    
+        {%endblock%}
     <div class="container">
         {% block content %}
         {% endblock %}
@@ -22,5 +90,49 @@
             {% block jquery%} {% endblock %}
         })
     </script>
+
+<!-- Compiled and minified JavaScript -->
+<script src="{% static '/js/materialize.min.js' %}"></script>
+<script src="https://use.fontawesome.com/f204f9e510.js "></script>
+<script>
+    //jQuery
+
+    $('.dropdown-trigger').dropdown();
+</script>
+<footer class="page-footer">
+        <div class="container ">
+            <div class="row ">
+                <div class="col l6 s12 ">
+                    <!-- <p class="grey-text text-lighten-4 ">!insert social media and other related links!</p> -->
+                    <div class="row s6">
+                        <h6 class="white-text">Connect With Us:</h6>
+    
+                        <a href="https://github.com/ogaroh"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://twitter.com/?"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://mail.google.com/compose"><i class="fas fa-envelope fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+    
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12 ">
+                    <h6 class="white-text ">Quick Links</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 " href="/charts ">Charts & Statistics</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/help ">Help</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/contact ">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright ">
+            <div class="container ">
+                © ImmunoTrak 2019
+                <a class="grey-text text-lighten-4 right " href="https://ogaroh.github.io ">Contact the developer</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

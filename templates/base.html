@@ -16,10 +16,6 @@
     <title>
         {%block title%}ImmunoTrak:: Real-time statistics{%endblock%}
     </title>
-
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /> {%block extrahead%}{%endblock%}
     <meta content="#085563" name="theme-color">
@@ -77,7 +73,7 @@
     {%endblock%}
     <style>
         /*Max height overrides height*/
-        
+
         .with-min-height {
             margin: 5px;
             padding: 10px;
@@ -93,51 +89,52 @@
     <!-- Compiled and minified JavaScript -->
     <script src="{% static '/js/materialize.min.js' %}"></script>
     <script src="https://use.fontawesome.com/f204f9e510.js "></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" integrity="sha256-o8aByMEvaNTcBsw94EfRLbBrJBI+c3mjna/j4LrfyJ8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"
+        integrity="sha256-o8aByMEvaNTcBsw94EfRLbBrJBI+c3mjna/j4LrfyJ8=" crossorigin="anonymous"></script>
     <script>
         //jQuery
 
         $('.dropdown-trigger').dropdown();
     </script>
+    {%block footer%}
+    <footer class="page-footer">
+        <div class="container ">
+            <div class="row ">
+                <div class="col l9 s12 ">
+                    <!-- <p class="grey-text text-lighten-4 ">!insert social media and other related links!</p> -->
+                    <div class="row s6">
+                        <h6 class="white-text">Connect With Us:</h6>
 
-</body>
-{%block footer%}
-<footer class="page-footer">
-    <div class="container ">
-        <div class="row ">
-            <div class="col l6 s12 ">
-                <!-- <p class="grey-text text-lighten-4 ">!insert social media and other related links!</p> -->
-                <div class="row s6">
-                    <h6 class="white-text">Connect With Us:</h6>
+                        <a href="https://github.com/ogaroh"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="https://twitter.com/?"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="https://mail.google.com/compose"><i class="fas fa-envelope fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
 
-                    <a href="https://github.com/ogaroh"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="https://twitter.com/?"><i class="fab fa-twitter fa-2x"></i></a>
-                    <a href="https://mail.google.com/compose"><i class="fas fa-envelope fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-
+                    </div>
+                </div>
+                <div class="col l4 offset-l2 s12 ">
+                    <h6 class="white-text ">Quick Links</h6>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3 " href="/charts ">Charts & Statistics</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/help ">Help</a></li>
+                        <li><a class="grey-text text-lighten-3 " href="/contact ">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col l4 offset-l2 s12 ">
-                <h6 class="white-text ">Quick Links</h6>
-                <ul>
-                    <li><a class="grey-text text-lighten-3 " href="/charts ">Charts & Statistics</a></li>
-                    <li><a class="grey-text text-lighten-3 " href="/about ">About ImmunoTrak</a></li>
-                    <li><a class="grey-text text-lighten-3 " href="/help ">Help</a></li>
-                    <li><a class="grey-text text-lighten-3 " href="/contact ">Contact Us</a></li>
-                </ul>
+        </div>
+        <div class="footer-copyright ">
+            <div class="container ">
+                © ImmunoTrak 2019
+                <a class="grey-text text-lighten-4 right " href="https://ogaroh.github.io ">Contact the developer</a>
             </div>
         </div>
-    </div>
-    <div class="footer-copyright ">
-        <div class="container ">
-            © ImmunoTrak 2019
-            <a class="grey-text text-lighten-4 right " href="https://ogaroh.github.io ">Contact the developer</a>
-        </div>
-    </div>
-</footer>
-{%endblock%}
+    </footer>
+    {%endblock%}
+
+</body>
 
 </html>

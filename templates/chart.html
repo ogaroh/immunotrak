@@ -1,0 +1,223 @@
+{% extends 'base_1.html' %}
+
+<script>
+{% block jquery %}
+
+var endpoint = '/charts/api/chart/data/'
+var location_data_endpoint = '/charts/api/location-chart/data/'
+
+var defaultData = []
+var labels = [];
+
+var location_labels = []
+var location_data = []
+
+$.ajax({
+    method: "GET",
+    url: endpoint,
+    success: function(data){
+        labels = data.labels
+        defaultData = data.default
+
+        // chart contexts
+        var ctx = document.getElementById('totalsChart');
+        var ctx3 = document.getElementById('vaccinesChart');
+        var ctx4 = document.getElementById('healthWorkersChart');
+        
+        // vaccines chart
+        var vaccinesChart = new Chart(ctx3, {
+            type: 'polarArea',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Vaccines',
+                    data: defaultData,
+
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // healthworkers chart
+        var healthWorkersChart = new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Number in database',
+                    data: defaultData,
+
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        // countrywide stats chart
+        var totalsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Number in database',
+                    data: defaultData,
+
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    },
+    error: function(error_data){
+        console.log("Error")
+        console.log(error_data)
+    }
+})
+
+$.ajax({
+    method: 'GET',
+    url: location_data_endpoint,
+
+    success: function(location_data){
+        location_labels = location_data.labels
+        location_data = location_data.default
+
+        var ctx = document.getElementById('locationsChart');
+        // locations chart
+        var locationsChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: location_labels,
+            datasets: [{
+                label: 'Locations',
+                data: location_data,
+
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+        });
+    },
+    error: function(error_data) {
+        console.log("Error")
+        console.log(error_data)
+    }
+})
+
+{% endblock %}
+</script>
+
+{% block content %}
+
+<div class="row center">
+    <hr>
+    <h1>CHARTS</h1>
+    <hr>
+    <div class="col-sm-4">
+        <hr>
+        <h4>COUNTRYWIDE STATISTICS</h4>
+        <hr>
+        <canvas class="chart-border" id="totalsChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="col-sm-4">
+        <hr>
+        <h4>VACCINES AVAILABLE</h4>
+        <hr>
+        <canvas class="chart-border" id="vaccinesChart" width="400" height="400"></canvas>
+    </div>
+
+    <div class="col-sm-4">
+        <hr>
+        <h4>HEALTH WORKERS</h4>
+        <hr>
+        <canvas class="chart-border" id="healthWorkersChart" width="400" height="400"></canvas>
+    </div>
+
+</div>
+
+
+<div class="row">
+
+    <div class="col-sm-9">
+        <hr>
+        <h4>LOCATIONS</h4>
+        <hr>
+        <canvas class="chart-border" id="locationsChart" width="400" height="400"></canvas>
+    </div>
+    <div class="col-sm-3 center">
+        <hr>
+        <h4>LINKS TO TABLES</h4>
+        <hr>
+        <div>
+            <a href="/charts/tables/children">Children</a>
+            <br>    
+            <a href="/charts/tables/parents/">Parents</a>
+            <br>
+            <a href="/charts/tables/vaccines/">Vaccines</a>
+            <br>    
+            <a href="/charts/tables/locations/">Locations</a>
+            <br>
+        </div>
+    </div>
+
+</div>
+
+<div class="row center">
+
+</div>
+
+
+{% endblock %}
